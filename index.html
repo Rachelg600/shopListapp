@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9EE7FG51E6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9EE7FG51E6');
+    </script>
+</head>
+
+<body onload="displayCurrentDate()">
+    <header>
+        <h1>Shared Shopping List</h1>
+    </header>
+    
+    <div class="input">
+        <form id="shopping-form">
+            <input type="text" id="item" placeholder="Item Description">
+            <!-- <input type="text" id="user" placeholder="Added by"> -->
+            <!-- Hard code dropdown list for "Added By" -->
+            <select id="userSelect">
+                <option value="Hxxx">Hxxx</option>
+                <option value="Wxxx">Wxxx</option>
+                <option value="Lxxx">Lxxx</option>
+            </select>
+            <button class="add-item" type="button" onclick="addItem()">+</button>
+        </form>
+    </div>
+    <div class="list">
+        <h2>List of items to buy</h2>
+        <div id="current-date"></div>
+        <table id="shopping-list">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Item</th>
+                    <th onclick="sortTable(1)">Added By</th>
+                    <th onclick="sortTable(2)">Date Added</th>
+                    <!-- added column for remove button -->
+                    <th></th> 
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+
+        <!-- Clear whole list -->
+        <button class="clear-list" type="button" onclick="clearList()">Clear List</button>
+    </div>
+    <script src="table.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+* {
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
+}
+
+header {
+    background-color: rgb(96, 172, 220);
+    display: block;
+    color: #0f0100;
+    padding: 3px;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+}
+
+h2 {
+    max-width: auto; /* Set to the viewport width */
+    display: inline-block;
+    background-color: none;
+    color: #121212;
+    text-align: center; 
+    align-items: left;
+    justify-content: left;
+}
+
+#current-date {
+    display:flex ;
+    margin-bottom: 8px;
+}
+
+.list {
+    background-image: url(images/shoppingbag_t.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /*Ensures that the background covers the entire viewport height */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+#item {
+    width: 360px;
+    height: 35px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+#userSelect {
+    width: 180px;
+    height: 35px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+
+table {
+    position: static;
+    border-collapse: collapse;
+    width: 70%;
+    margin-bottom: 8px;
+}
+
+th, td {
+    border-style: none;
+    background-color: #f2f2f2;
+    padding: 8px;
+    text-align: left;
+}
+
+.add-item {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button {
+    background-color: rgb(99, 9, 9);
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.clear-list {
+    background-color: rgb(99, 9, 9);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
