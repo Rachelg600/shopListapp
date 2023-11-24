@@ -68,7 +68,7 @@ if (item.trim() !== "") {
         
         if (confirmRemove) {
             // Remove the row from the table
-            // row.remove();
+            row.remove();
 
             // Optionally, remove the item from your arrays
             const index = itemList.indexOf(item);
