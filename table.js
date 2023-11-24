@@ -15,8 +15,7 @@ function addItem() {
   // let date = document.getElementById("date").value;
 
 if (item.trim() !== "") {
-      // let table = document.getElementById("shopping-list");
-
+      //create table
       let tableBody = document.getElementById("table-body");
       
       // Create a new row
