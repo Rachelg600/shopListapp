@@ -28,7 +28,7 @@ async function connect() {
     console.log("Attempting to connect to MongoDB");
     await client.connect();
     console.log("Connected to MongoDB")
-    return client.db("todolistdb"); //Change this to the name of your db that you keyed in on MongoDB
+    return client.db("shopList111"); //Change this to the name of your db that you keyed in on MongoDB
   } catch (err) {
     console.error("Error:", err);
   } 
@@ -43,9 +43,9 @@ app.use(async (req, res, next) => {
 // 7. This is where you shine! Perform your database operations here, e.g. the app.get function. This is what you should do to display a list of documents (aka data) from a MongoDB collection: 
 app.get("/", async (req, res) => {
   try {
-    const collection = req.db.collection("your_collection_name"); //Replace "your_collection_name" with the actual name of the MongoDB collection from which you want to retrieve documents.
+    const collection = req.db.collection("shopListapp"); //Replace "your_collection_name" with the actual name of the MongoDB collection from which you want to retrieve documents.
     const documents = await collection.find({}).toArray();    
-    res.render("your_template_name", { documents }); //Replace "your_template_name" with the name of the template you want to render (if you are using a template engine). Alternatively, you can send the data as JSON if your application doesn't use template rendering.
+    res.render("shopListapp", { documents }); //Replace "your_template_name" with the name of the template you want to render (if you are using a template engine). Alternatively, you can send the data as JSON if your application doesn't use template rendering.
   } catch (error) {
     console.error("Error:", error);
     res.status(500).send("An error occurred while fetching data.");
