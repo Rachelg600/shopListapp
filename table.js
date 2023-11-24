@@ -36,15 +36,12 @@ if (item.trim() !== "") {
       // Push item and date to arrays
       itemList.push(item);
       dateList.push(formattedDate);
-
-      // Create a remove button for items bought or no longer needed
-      let removeButton = document.createElement("button");
-      removeButton.appendChild(document.createTextNode("X"));
-      
+    
       // Track strike-off status
       let isStrikedOff = false;
 
-      removeButton.addEventListener("click", function() {
+      // Allow strike off of items no longer needed/bought
+      cellItem.addEventListener("click", function() {
         if (!isStrikedOff) {
           // Apply the strike-off style to the item
           cellItem.style.textDecoration = "line-through";
@@ -60,11 +57,32 @@ if (item.trim() !== "") {
             }
       });
 
+      // Remove items from list
+      let removeButton = document.createElement("button");
+      removeButton.appendChild(document.createTextNode("X"));
       // Append the remove button to the cell
       cellAction.appendChild(removeButton);
 
+      removeButton.addEventListener("click", function() {
+        // Prompt the user for confirmation before removing the item
+        const confirmRemove = confirm("Remove this item from list?");
+        
+        if (confirmRemove) {
+            // Remove the row from the table
+            // row.remove();
+
+            // Optionally, remove the item from your arrays
+            const index = itemList.indexOf(item);
+            if (index !== -1) {
+                itemList.splice(index, 1);
+                dateList.splice(index, 1);
+            }
+        }
+      });
+
       // Clear input fields
       document.getElementById("item").value = "";
+      document.getElementById("user").value = "";
   }
   else {
       // Display an error message for invalid date
