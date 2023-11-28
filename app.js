@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a3ee10869cc33db9d9c1a804c03eb25c05456440
 // 1. At the top of your code, make sure you include: 
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const express = require("express"); 
@@ -55,4 +59,8 @@ app.get("/", async (req, res) => {
 // 8. Start the Express.js server and listen on a specific port:
   app.listen(port, () => {
     console.log(`Server running on port ${port}`);
+<<<<<<< HEAD
   });
+=======
+  });
+>>>>>>> a3ee10869cc33db9d9c1a804c03eb25c05456440
