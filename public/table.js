@@ -88,6 +88,7 @@ if (item.trim() !== "") {
       alert("Please enter an item description.");
   }
 }
+
 function sortTable(columnIndex) {
   let table, rows, switching, i, x, y, shouldSwitch;
   table = document.getElementById("shopping-list");

@@ -110,3 +110,7 @@ button {
     border-radius: 4px;
 }
 
+.strikeoff {
+    text-decoration: line-through;
+}
+
