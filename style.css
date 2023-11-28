@@ -12,6 +12,14 @@ header {
     justify-content: center;
 }
 
+p {
+    color: #0f0100;
+    padding: 3px;
+    font-size: small;
+    text-align: left;
+    justify-content: center; 
+}
+
 h2 {
     max-width: auto; /* Set to the viewport width */
     display: inline-block;
