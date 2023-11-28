@@ -132,18 +132,24 @@ function sortTable(columnIndex) {
 
 //Clear shopping list
 function clearList() {
-    let tableBody = document.getElementById("table-body");
+  const confirmClear = confirm("Are you sure you want to clear the list?");
+    
+  if (confirmClear) {
+      let tableBody = document.getElementById("table-body");
+      
+      // Remove all rows from the table body
+      while (tableBody.firstChild) {
+          tableBody.removeChild(tableBody.firstChild);
+      }
 
-    // Remove all rows from the table body
-    while (tableBody.firstChild) {
-        tableBody.removeChild(tableBody.firstChild);
-    }
+      // Clear the arrays
+      itemList = [];
+      dateList = [];
 
-    // Clear the arrays
-    itemList = [];
-    dateList = [];
-    localStorage.removeItem('itemList');
-    localStorage.removeItem('dateList');
+      // Remove items from localStorage
+      localStorage.removeItem('itemList');
+      localStorage.removeItem('dateList');
+  }
 }
 
 // Display current date
